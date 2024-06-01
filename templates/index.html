@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="{% static 'contacts.css' %}">
     <title>Royalstate Ins.</title>
 </head>
 <body>
@@ -28,18 +31,19 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Pricing</a>
+                    <a href="#contacts">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#">How to set-up</a>
+                    <a href="#about">About</a>
                 </li>
+                
                 <li>
-                    <a href="" class="button-outline side_navbar_btn">
+                    <a href="#" class="button-outline side_navbar_btn" onClick="alert('You clicked the link!'); return false;">
                         Log In
                     </a>
                 </li>
                 <li>
-                    <a href="" class="button-primary side_navbar_btn">
+                    <a href="#" class="button-primary side_navbar_btn" onClick="alert('You clicked the link!'); return false;">
                         Sign Up
                     </a>
                 </li>
@@ -57,39 +61,17 @@
     </nav>
 <!---END OF NAVE BAR-->
 
-
-<section className="hero">
-    <div className="hero_left">
-        <h1 className="h1">
-            Every business is as good as its tools.
-        </h1>
-        <div className="hero_btn-container">
-            <a href="#" className="button-outline">
-                How it works
-            </a>
-            <a href="#" className="button-primary button_1">
-                Get Started for free 
-            </a>
-        </div>
-    </div>
-    <div className="hero_right">
-        <div className="img_container">
-            <img src={img_5} alt="" />
-        </div>
-    </div>
-</section>
-
 <!--Hero section-->
 <section class="hero">
     <div class="hero_left">
         <h1 class="h1">
-            Every business is as good as its tools.
+            Protect Tomorrow, Insure Today
         </h1>
         <div class="hero_btn-container">
-            <a href="#" class="button-outline">
-                How it works
+            <a href="#about" class="button-outline">
+                 Quotes
             </a>
-            <a href="#" class="button-primary button_1">
+            <a href="#contacts" class="button-primary button_1">
                 Get Started for free 
             </a>
         </div>
@@ -101,5 +83,132 @@
     </div>
 </section>
 <!--END OF FIRST HERO SECTION-->
+
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+    <div class="about__container container grid">
+      <h2 class="section__title-1">
+        <span>About Royalstate Ins.</span>
+      </h2>
+  
+      <div class="about__perfil">
+        <div class="about__image">
+          <img src="https://wallpapercave.com/wp/wp12349023.jpg" alt="image" class="about__img">
+  
+          <div class="about__shadow"></div>
+  
+          <div class="geometric-box"></div>
+  
+          <div class="about__box"></div>
+        </div>
+      </div>
+  
+      <div class="about__info">
+        <p class="about__description">
+            Welcome to <b>Royalstate Insurance Agency!</b>
+            We are dedicated to providing you with comprehensive
+             insurance solutions tailored to meet your unique needs. 
+             With years of industry experience, our team of 
+             knowledgeable agents is committed to delivering 
+             exceptional service and personalized coverage options. 
+             Whether <b>you're looking for auto, home, life, or business 
+                insurance</b>, we work with top-rated carriers to ensure you 
+             get the best protection at competitive rates. Trust us to
+             safeguard what matters most to you.
+             Discover the difference of a reliable and caring
+             insurance partner at <b>Royalstate Insurance Agency</b>.
+        </p>
+  
+        <ul class="about__list">
+          <li class="about__item">
+            <b>Best at:</b> Motor Vehicle Insurance, Life Covers, Health Insurance, etc.
+          </li>
+        </ul>
+  
+        <div class="about__buttons">
+          <a href="#contacts" class="button">
+            <i class="ri-send-plane-line"></i> Contact Us
+          </a>
+  
+          <a href="https://www.linkedin.com/" target="_blank" class="button__ghost">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--CONTACT PAGE-->
+<section class="contact_us" id="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="contact_inner">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="contact_form_inner">
+                                <div class="contact_field">
+                                    <h3>Contatc Us</h3>
+                                    <p>Feel Free to contact us any time. We will get back to you as soon as we can!.</p>
+                                    <form action="" method="POST">
+                                        {% csrf_token %}
+                                        <input type="text" class="form-control form-group" placeholder="Name" />
+                                    <input type="text" class="form-control form-group" placeholder="Email" />
+                                    <textarea class="form-control form-group" placeholder="Message"></textarea>
+                                    <button class="button-primary">Send</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="right_conatct_social_icon d-flex align-items-end">
+                               <div class="socil_item_inner d-flex">
+                                  <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_info_sec">
+                        <h4>Contact Info</h4>
+                        <div class="d-flex info_single align-items-center">
+                            <i class="fas fa-headset"></i>
+                            <span>+254 7026 09461</span>
+                        </div>
+                        <div class="d-flex info_single align-items-center">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>royalstate@gmail.com</span>
+                        </div>
+                        <div class="d-flex info_single align-items-center">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span> Liberty Insurance, ICEA Lion, Jubilee Insurance</span>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="map_inner">
+                    <h4>Find Us on Google Map</h4>
+                    <div class="map_bind">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63908.63679187264!2d36.63896039694748!3d-1.4384427259792045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0c35ed0f0d61%3A0x4a7efb1a2d987d8f!2sKiserian%2C%20Kenya!5e0!3m2!1sen!2s!4v1685612920440!5m2!1sen!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 </body>
 </html>
